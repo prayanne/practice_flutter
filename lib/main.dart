@@ -60,6 +60,11 @@ class MyHomePage extends StatelessWidget {
     var appState = context.watch<MyAppState>();
     var pair = appState.current;
 
+    IconData icon;
+    appState.favorites.contains(pair)
+        ? icon = Icons.favorite
+        : Icons.favorite_border;
+
     return Scaffold(
       body: Center(
         child: Column(
