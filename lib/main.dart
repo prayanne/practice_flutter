@@ -1,4 +1,4 @@
-import 'dart:nativewrappers/_internal/vm/lib/math_patch.dart';
+// import 'dart:nativewrappers/_internal/vm/lib/math_patch.dart';
 
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
@@ -49,7 +49,8 @@ class MyHomePage extends StatelessWidget {
 
           ElevatedButton(
             onPressed: () {
-              print('btn pressed!');
+              // print('btn pressed!');
+              appState.getNext();
             },
             child: Text('next'),
           ),
