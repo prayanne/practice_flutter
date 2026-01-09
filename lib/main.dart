@@ -63,7 +63,7 @@ class MyHomePage extends StatelessWidget {
     IconData icon;
     appState.favorites.contains(pair)
         ? icon = Icons.favorite
-        : Icons.favorite_border;
+        : icon = Icons.favorite_border;
 
     return Scaffold(
       body: Center(
@@ -75,11 +75,12 @@ class MyHomePage extends StatelessWidget {
             Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                ElevatedButton(
+                ElevatedButton.icon(
                   onPressed: () {
                     appState.toggleFavorite();
                   },
-                  child: Text('Favorite'),
+                  icon: Icon(icon),
+                  label: Text('Favorite'),
                 ),
 
                 SizedBox(width: 10),
