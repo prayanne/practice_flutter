@@ -65,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
         page = GeneratorPage();
         break;
       case 1:
-        page = Placeholder();
+        page = ListFavoritesViewer();
         break;
       default:
         throw UnimplementedError('no widget for $selectedIndex');
@@ -182,5 +182,21 @@ class BigCard extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class ListFavoritesViewer extends StatelessWidget {
+  var list = ['hi', 'hello', 'fuckyou'];
+  @override
+  Widget build(BuildContext context){
+    return
+      Center(
+        child: Column(
+          children:[
+            Text('list'),
+            for (var l in list) Text(l),
+          ],
+        ),
+      );
   }
 }
